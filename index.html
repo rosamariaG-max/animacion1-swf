@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Animación Margarita con Ruffle</title>
+  <title>Animación SMmusica</title>
   <style>
     body {
       background-color: #f0f0f0;
@@ -16,20 +16,18 @@
   <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
 </head>
 <body>
-  <h1>Animación Margarita</h1>
+  <h1>Animación SMmusica</h1>
   <p>Si no ves la animación, espera unos segundos o prueba otro navegador moderno.</p>
 
   <!-- Contenedor para Ruffle -->
   <div id="ruffle-container"></div>
 
   <script>
-    // Inicializar Ruffle
     window.RufflePlayer = window.RufflePlayer || {};
     const ruffle = window.RufflePlayer.newest();
     const player = ruffle.createPlayer();
     document.getElementById("ruffle-container").appendChild(player);
-    // Cargar tu archivo SWF
-    player.load("margarita-1.swf");
+    player.load("SMmusica.swf");
   </script>
 </body>
 </html>
