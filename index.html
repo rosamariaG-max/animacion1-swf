@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Mis Animaciones</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Animación SMmusica</title>
+  <style>
+    body {
+      background-color: #f0f0f0;
+      text-align: center;
+      margin-top: 50px;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+  <!-- Cargar Ruffle desde CDN -->
+  <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
 </head>
 <body>
-    <h1>Galería de Animaciones</h1>
-    <ul>
-        <li><a href="animacion1/">Ver animación margarita1</a></li>
-        <li><a href="animacion2/">Ver animación SMmusica</a></li>
-    </ul>
+  <h1>Animación SMmusica</h1>
+  <p>Si no ves la animación, espera unos segundos o prueba otro navegador moderno.</p>
+
+  <!-- Contenedor para Ruffle -->
+  <div id="ruffle-container"></div>
+
+  <script>
+    window.RufflePlayer = window.RufflePlayer || {};
+    const ruffle = window.RufflePlayer.newest();
+    const player = ruffle.createPlayer();
+    document.getElementById("ruffle-container").appendChild(player);
+    player.load("SMmusica.swf");
+  </script>
 </body>
 </html>
